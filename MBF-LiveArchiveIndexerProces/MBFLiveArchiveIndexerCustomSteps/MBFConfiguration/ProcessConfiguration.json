@@ -1,0 +1,7 @@
+﻿{
+  "SendGridStep.Config": "{\"UserName\":\"[your Sengrid User]\", \"Pswd\":\"[your Password Sengrid]\", \"To\":\"[TO mail address]\", \"FromName\":\"MBF Notification\", \"FromMail\":\"[From mail address]\"}",
+  "Index2Preview.CopySubTitles": "yes",
+  "InjectTTML.searchServiceName": "[Azure Search Service Name]",
+  "InjectTTML.adminApiKey": "[Azure Search Key]",
+  "InjectTTML.indexName": "[Azure Search Ibdex Name]"
+}

@@ -1,0 +1,9 @@
+﻿{
+  "SelectAssetBy.Type": "assetname",
+  "SelectAssetBy.Value": "[Your program Name Here]",
+  "GridEncodeStep.encodeConfigList": [ "ArchiveTopBitrate.json" ],
+  "GridEncodeStep.MediaProcessorName": "Media Encoder Standard",
+  "Index2Preview.encodeConfigList": [ "AzureMediaIndexer1.xml" ],
+  "Index2Preview.MediaProcessorName": "Azure Media Indexer",
+  "Index2Preview.CopySubTitles": "yes"
+}

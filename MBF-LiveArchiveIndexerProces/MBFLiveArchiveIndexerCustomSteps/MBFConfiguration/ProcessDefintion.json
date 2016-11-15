@@ -1,0 +1,49 @@
+﻿[
+  {
+    "AssemblyName": "MediaButler.BaseProcess.dll",
+    "TypeName": "MediaButler.BaseProcess.MessageHiddeControlStep",
+    "ConfigKey": ""
+  },
+
+  {
+    "AssemblyName": "MediaButler.BaseProcess.dll",
+    "TypeName": "MediaButler.BaseProcess.SelectAssetByStep",
+    "ConfigKey": ""
+  },
+
+  {
+    "AssemblyName": "MediaButler.BaseProcess.dll",
+    "TypeName": "MediaButler.BaseProcess.GridEncodeStep",
+    "ConfigKey": ""
+  },
+  {
+    "AssemblyName": "MediaButler.BaseProcess.dll",
+    "TypeName": "MediaButler.BaseProcess.MediaAnalytics.AzureMediaIndexer2Step",
+    "ConfigKey": ""
+  },
+  {
+    "AssemblyName": "MediaButler.BaseProcess.dll",
+    "TypeName": "MediaButler.BaseProcess.Control.MediaButlerCustomStep",
+    "ConfigKey": "ArchiveTopBitrateStep"
+  },
+  {
+    "AssemblyName": "MediaButler.BaseProcess.dll",
+    "TypeName": "MediaButler.BaseProcess.AzureSearch.InjectTTML",
+    "ConfigKey": ""
+  },
+  {
+    "AssemblyName": "MediaButler.BaseProcess.dll",
+    "TypeName": "MediaButler.BaseProcess.SendGridStep",
+    "ConfigKey": ""
+  },
+  {
+    "AssemblyName": "MediaButler.BaseProcess.dll",
+    "TypeName": "MediaButler.BaseProcess.DeleteOriginalBlobStep",
+    "ConfigKey": ""
+  },
+  {
+    "AssemblyName": "MediaButler.BaseProcess.dll",
+    "TypeName": "MediaButler.BaseProcess.MessageHiddeControlStep",
+    "ConfigKey": ""
+  }
+]
