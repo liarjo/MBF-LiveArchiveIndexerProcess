@@ -5,6 +5,7 @@
 [image here]
 ### MBF-LiveArchiveIndexerProcess Process
 The process flow is:
+
 1. Start
 2. Select Asset program by Name
 2. Encode to generaate single MP4
@@ -28,11 +29,14 @@ The process flow is:
 ### Deploy MBF-LiveArchiveIndexerProcess
 
 #### Process configuration on ButlerConfiguration
-A. Add process definition:
+####A. Add process definition:
 
 a. PartitionKey: **MediaButler.Common.workflow.ProcessHandler**
+
 b.  RowKey: **livearchiveindexer.ChainConfig**
+
 c.  ConfigurationValue (json process definition):
+
 ```json
 [
   {
@@ -84,9 +88,11 @@ c.  ConfigurationValue (json process definition):
   }
 ]
 ```
-B. Add process Configuration
+#### B. Add process Configuration
 a. PartitionKey: **MediaButler.Common.workflow.ProcessHandler**
+
 b.  RowKey: **livearchiveindexer.config**
+
 c.  ConfigurationValue (json process configuration):
 ```json
 {
@@ -97,9 +103,11 @@ c.  ConfigurationValue (json process configuration):
   "InjectTTML.indexName": "[Azure Search Ibdex Name]"
 }
 ```
-C. Add Custom Step configuration
+#### C. Add Custom Step configuration
 a. PartitionKey: **MediaButler.Common.workflow.ProcessHandler**
+
 b.  RowKey: **ArchiveTopBitrateStep.StepConfig**
+
 c.  ConfigurationValue (json Custom Step configuration):
 ```json
 {
@@ -107,26 +115,30 @@ c.  ConfigurationValue (json Custom Step configuration):
   "TypeName": "MBFLiveArchiveIndexerCustomSteps.ArchiveTopBitrateStep"
 }
 ```
-D. Upload Custom Step DLL
+#### D. Upload Custom Step DLL
 a. Upload MBFLiveArchiveIndexerCustomSteps.dll (This C# project Binary ) to MBF blob stoarge in **mediabutlerbin** container 
 
-E. Create Staging storage container for this process, create container **livearchiveindexer** on MBF stoarge
+#### E. Create Staging storage container for this process, create container **livearchiveindexer** on MBF stoarge
 
-F. Upload transcoding profile definitions
+#### F. Upload transcoding profile definitions
 a. Upload **ArchiveTopBitrate.json** to **livearchiveindexer** container
+
 b. Upload **AAzureMediaIndexer1.xml** to **livearchiveindexer** container
 
-G. Update  on **ButlerConfiguration** table, the container list register.  It is the
+#### G. Update  on **ButlerConfiguration** table, the container list register.  It is the
 register with PartitionKey **MediaButler.Workflow.WorkerRole** and
 RowKey **ContainersToScan**. You need to add to the list container name
 **livearchiveindexer**. For example, the value could be:
 
 testbasicprocess,livearchiveindexer
 
-H. Create New Azure C# HttpTriggerCSharp  Function
+#### H. Create New Azure C# HttpTriggerCSharp  Function
 a. New Funciton with name **livearchiveindexer** and autorization level Function
+
 b. On View Files option, delete run.csx
+
 c. Upload files **run.csx** and **project.json**
+
 d. On run.csx Update  variables StorageConnectionString, containerName, targetContainerName, mp4ProfileName and IndexProfileName. For example
 
 ```cs
@@ -136,7 +148,7 @@ static string targetContainerName = "livearchiveindexer";
 static string mp4ProfileName = "ArchiveTopBitrate.json";
 static string IndexProfileName = "AzureMediaIndexer1.xml";
 ```
-I. Restart MBF WebJobs.
+#### I. Restart MBF WebJobs.
 
 ### Test MBF-LiveArchiveIndexerProcess
 To test MBF-LiveArchiveIndexerProcess you should call the HTTP endpoint using your Azure Function URL like this 
