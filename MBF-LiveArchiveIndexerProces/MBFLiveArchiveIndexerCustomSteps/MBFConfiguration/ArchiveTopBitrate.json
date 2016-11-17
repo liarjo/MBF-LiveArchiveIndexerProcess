@@ -16,7 +16,7 @@
   ],
   "Outputs": [
     {
-      "FileName": "ArchiveTopBitrate_{Basename}.mp4",
+      "FileName": "ArchiveTopBitrate.mp4",
       "Format": {
         "Type": "MP4Format"
       }

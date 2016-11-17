@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <configuration version="2.0">
-  <input name="ArchiveTopBitrate_video_415000.mp4"></input>
+  <input name="ArchiveTopBitrate.mp4"></input>
   <settings></settings>
   <features>
     <feature name="ASR">
